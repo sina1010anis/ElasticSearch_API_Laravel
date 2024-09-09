@@ -15,5 +15,8 @@ Route::prefix('/elastic')->group(function () {
 
     Route::get('/mapping', [CO::class, 'mapping'])->name('elastic');
 
+    Route::get('/analyze', [CO::class, 'analyze'])->name('analyze');
+
+
 });
 

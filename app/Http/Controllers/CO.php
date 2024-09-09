@@ -16,4 +16,20 @@ class CO extends Controller
         return $response;
 
     }
+
+    public function analyze()
+    {
+
+        $response = Http::post('http://localhost:9200/_analyze', [
+
+            'analyzer' => 'standard',
+
+            'text' => 'hi is a pc ubuntu...!!! THE END'
+
+        ]);
+
+
+        return $response;
+
+    }
 }
