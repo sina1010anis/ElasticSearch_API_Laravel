@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Http;
 
 class CO extends Controller
 {
-    public function __invoke()
+    public function mapping()
     {
 
-        $response = Http::get('http://localhost:9200');
+        $response = Http::get('http://localhost:9200/products/_mapping');
 
 
         return $response;

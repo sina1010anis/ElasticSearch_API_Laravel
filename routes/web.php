@@ -10,3 +10,10 @@ Route::get('/', function () {
     return view('welcome');
 
 });
+
+Route::prefix('/elastic')->group(function () {
+
+    Route::get('/mapping', [CO::class, 'mapping'])->name('elastic');
+
+});
+
